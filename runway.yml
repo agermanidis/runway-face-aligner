@@ -1,0 +1,10 @@
+version: 0.1
+python: 3.6
+entrypoint: python runway_model.py
+cuda: 10 
+spec:
+    cpu: True
+    gpu: True
+build_steps:
+    - apt-get update && apt-get install -y libboost-all-dev cmake
+    - pip install -r requirements.txt
